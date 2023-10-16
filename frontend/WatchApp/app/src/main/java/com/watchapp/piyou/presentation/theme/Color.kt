@@ -1,4 +1,4 @@
-package com.example.watchapp.presentation.theme
+package com.watchapp.piyou.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 import androidx.wear.compose.material.Colors
