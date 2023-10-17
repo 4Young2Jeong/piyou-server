@@ -1,10 +1,10 @@
-package com.watchapp.piyou.presentation.theme
+package com.example.watchapp.presentation.theme
 
 import androidx.compose.runtime.Composable
 import androidx.wear.compose.material.MaterialTheme
 
 @Composable
-fun MyApplicationTheme(
+fun WatchAppTheme(
     content: @Composable () -> Unit
 ) {
     MaterialTheme(
