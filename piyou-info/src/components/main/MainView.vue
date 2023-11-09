@@ -27,6 +27,23 @@
           </a>
         </div>
       </div>
+      <ul class="col-12 info_list">
+          <li>
+            <a href="https://instagram.com/piyou_app?utm_source=qr">
+              <img src="@/assets/resource/img/instagram_icon.png" alt="인스타그램 아이콘"/>
+            </a>
+          </li>
+          <li>
+            <a href="http://pf.kakao.com/_xfIysG">
+              <img src="@/assets/resource/img/kakao_icon.png" alt="카카오톡 아이콘"/>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:piyou.developers@gmail.com">
+              <img src="@/assets/resource/img/gmail_icon.png" alt="지메일 아이콘"/>
+            </a>
+          </li>
+        </ul>
     </div>
 
   </div>
