@@ -28,17 +28,11 @@ public class SchedulerService {
     @Transactional
     public void updateChildExp() {
         List<Child> childList = childRepository.findByName("batch_test");
-        int count = 0;
 
         for (Child child : childList) {
             child.minusExperience(4);
-            if (++count % batchSize == 0) {
-                entityManager.flush();
-            }
+            childRepository.save(child);
         }
-
-        entityManager.flush();
-        entityManager.clear();
     }
 
     @Transactional
@@ -62,11 +56,11 @@ public class SchedulerService {
 
         for (ChildNoti childNoti : oldNoti) {
             pushService.sendPush(PushRequest.builder()
-                                         .title("밥 먹기 10분 전이예요")
-                                         .message("방송 시간을 지켜주세요.\n" + "시청자들과의 약속을 지켜주세요")
-                                         .tokenList(childNoti.getChild()
-                                                            .getToken())
-                                         .build());
+                    .title("밥 먹기 10분 전이예요")
+                    .message("방송 시간을 지켜주세요.\n" + "시청자들과의 약속을 지켜주세요")
+                    .tokenList(childNoti.getChild()
+                            .getToken())
+                    .build());
         }
     }
 }
