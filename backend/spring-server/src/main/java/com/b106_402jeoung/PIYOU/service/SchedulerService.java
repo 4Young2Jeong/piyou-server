@@ -32,7 +32,7 @@ public class SchedulerService {
 
         for (Child child : childList) {
             child.minusExperience(4);
-            if (++count % 1 == 0) {
+            if (++count % batchSize == 0) {
                 entityManager.flush();
             }
         }
