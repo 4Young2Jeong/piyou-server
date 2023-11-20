@@ -32,7 +32,7 @@ public class SchedulerService {
 
         for (Child child : childList) {
             child.minusExperience(4);
-            if (++count % 1 == 0) {
+            if (++count % batchSize == 0) {
                 entityManager.flush();
             }
         }
@@ -62,7 +62,7 @@ public class SchedulerService {
 
         for (ChildNoti childNoti : oldNoti) {
             pushService.sendPush(PushRequest.builder()
-                                         .title("밥 먹기 10분 전이예요")
+                                         .title("밥 먹기 10분 전이에요")
                                          .message("방송 시간을 지켜주세요.\n" + "시청자들과의 약속을 지켜주세요")
                                          .tokenList(childNoti.getChild()
                                                             .getToken())
