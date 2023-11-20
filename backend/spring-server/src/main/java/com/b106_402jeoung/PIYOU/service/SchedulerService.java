@@ -28,7 +28,6 @@ public class SchedulerService {
     @Transactional
     public void updateChildExp() {
         List<Child> childList = childRepository.findByName("batch_test");
-        int count = 0;
 
         for (Child child : childList) {
             child.minusExperience(4);
@@ -36,9 +35,6 @@ public class SchedulerService {
                 entityManager.flush();
             }
         }
-
-        entityManager.flush();
-        entityManager.clear();
     }
 
     @Transactional
